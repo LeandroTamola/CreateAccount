@@ -20,12 +20,16 @@ import Animated, {
 import {SvgImage, SvgImageName} from './SvgImage';
 import {COLORS} from '@src/constants';
 import {Text} from './Text';
+import {PlatformUtils} from '@src/utils/platform';
+
+const TRANSLATE_Y = PlatformUtils.isIOS ? 24 : 40;
 
 interface Props extends TextInputProps {
   iconName: SvgImageName;
   errorMessage?: string;
   containerStyle?: StyleProp<ViewStyle>;
 }
+
 const TextInput: FC<Props> = ({
   iconName,
   errorMessage,
@@ -56,7 +60,7 @@ const TextInput: FC<Props> = ({
     const shouldAnimate = isFocused.value || !!value;
     return {
       transform: [
-        {translateY: withTiming(shouldAnimate ? 0 : 24)},
+        {translateY: withTiming(shouldAnimate ? 0 : TRANSLATE_Y)},
         {translateX: withTiming(shouldAnimate ? -12 : 0)},
         {scale: withTiming(shouldAnimate ? 0.9 : 1)},
       ],

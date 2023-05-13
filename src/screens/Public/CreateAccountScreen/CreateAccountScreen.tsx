@@ -18,6 +18,7 @@ const CreateAccountScreen = () => {
     <KeyboardAvoidingView>
       <ScrollView
         style={styles.container}
+        bounces={false}
         contentContainerStyle={styles.contentContainerStyle}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}>

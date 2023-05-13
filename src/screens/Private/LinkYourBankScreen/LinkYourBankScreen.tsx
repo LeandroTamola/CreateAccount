@@ -11,6 +11,7 @@ const LinkYourBankScreen = () => {
   return (
     <ScrollView
       style={styles.scrollView}
+      bounces={false}
       contentContainerStyle={styles.contentContainerStyle}
       showsHorizontalScrollIndicator={false}>
       <SafeAreaView edges={['bottom']} style={styles.container}>

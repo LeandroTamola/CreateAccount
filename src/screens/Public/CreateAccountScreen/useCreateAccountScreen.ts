@@ -16,9 +16,14 @@ const useCreateAccountScreen = () => {
   const formik = useFormik<CreateAccountValues>({
     initialValues,
     validationSchema: CreateAccountSchema,
-    onSubmit: async formValues => {
+    onSubmit: async ({email, password, firstName, lastName}) => {
       if (!firstName || !lastName || !email || !password) return;
-      await handleCreateAccount(formValues);
+      await handleCreateAccount({
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim(),
+        password: password.trim(),
+      });
     },
   });
 
