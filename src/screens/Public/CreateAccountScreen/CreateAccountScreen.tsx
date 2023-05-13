@@ -18,7 +18,9 @@ const CreateAccountScreen = () => {
     <KeyboardAvoidingView>
       <ScrollView
         style={styles.container}
-        contentContainerStyle={styles.contentContainerStyle}>
+        contentContainerStyle={styles.contentContainerStyle}
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}>
         <View style={styles.formContainer}>
           <TextInput
             value={values.firstName}
@@ -27,7 +29,7 @@ const CreateAccountScreen = () => {
             iconName="PersonCircle"
             placeholder="First Name"
             autoCapitalize="words"
-            style={styles.textInput}
+            containerStyle={styles.textInput}
             autoCorrect={false}
             {...(errors.firstName &&
               touched.firstName && {errorMessage: errors.firstName})}
@@ -39,7 +41,7 @@ const CreateAccountScreen = () => {
             iconName="PersonCircle"
             placeholder="Last Name"
             autoCapitalize="words"
-            style={styles.textInput}
+            containerStyle={styles.textInput}
             autoCorrect={false}
             {...(errors.lastName &&
               touched.lastName && {errorMessage: errors.lastName})}
@@ -50,7 +52,7 @@ const CreateAccountScreen = () => {
             onBlur={handleBlur('email')}
             iconName="Envelope"
             placeholder="Email Address"
-            style={styles.textInput}
+            containerStyle={styles.textInput}
             keyboardType="email-address"
             autoCapitalize="none"
             autoCorrect={false}
@@ -62,10 +64,12 @@ const CreateAccountScreen = () => {
             onBlur={handleBlur('password')}
             iconName="Lock"
             placeholder="Password"
-            style={styles.textInput}
+            containerStyle={styles.textInput}
             autoCapitalize="none"
             autoCorrect={false}
             secureTextEntry
+            returnKeyType="done"
+            onSubmitEditing={handleSubmit}
             {...(errors.password &&
               touched.password && {errorMessage: errors.password})}
           />
@@ -96,7 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.WHITE,
   },
   contentContainerStyle: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 25,
@@ -104,10 +108,10 @@ const styles = StyleSheet.create({
   formContainer: {
     paddingHorizontal: 12,
     width: '100%',
-    marginTop: 52,
+    marginTop: 24,
   },
   textInput: {
-    marginBottom: 30,
+    marginBottom: 25,
   },
   footer: {
     width: '100%',
