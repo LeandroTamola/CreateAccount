@@ -11,9 +11,7 @@ const PublicStack = createNativeStackNavigator<PublicNavigatorParams>();
 
 const PublicNavigator = () => {
   return (
-    <PublicStack.Navigator
-      initialRouteName="CreateAccount"
-      screenOptions={{headerShown: true}}>
+    <PublicStack.Navigator initialRouteName="CreateAccount">
       <PublicStack.Screen
         name="CreateAccount"
         component={CreateAccountScreen}

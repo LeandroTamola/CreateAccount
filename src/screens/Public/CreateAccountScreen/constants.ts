@@ -1,11 +1,9 @@
+import {User} from '@src/models/User';
 import * as Yup from 'yup';
 
-export type CreateAccountValues = {
-  firstName: string;
-  lastName: string;
-  email: string;
+export interface CreateAccountValues extends User {
   password: string;
-};
+}
 
 export const initialValues: CreateAccountValues = {
   firstName: '',

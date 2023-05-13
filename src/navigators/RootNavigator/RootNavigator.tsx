@@ -9,6 +9,7 @@ const RootStack = createNativeStackNavigator<RootNavigatorParams>();
 
 const RootNavigator = () => {
   const {user} = useLoginContext();
+
   return (
     <RootStack.Navigator screenOptions={{headerShown: false}}>
       {user ? (
