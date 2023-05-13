@@ -12,9 +12,21 @@ export type SvgImageProps = SvgProps & {
   type?: 'icon' | 'illustration';
 };
 
-const SvgImage = ({name, color = COLORS.BLACK, ...props}: SvgImageProps) => {
+const SvgImage = ({
+  name,
+  color = COLORS.BLACK,
+  type = 'icon',
+  ...props
+}: SvgImageProps) => {
   const SVG = SVG_IMAGES[name];
-  return <SVG fill={color} fillOpacity={1} {...props} accessible />;
+  return (
+    <SVG
+      fill={type === 'icon' ? color : COLORS.WHITE}
+      fillOpacity={1}
+      {...props}
+      accessible
+    />
+  );
 };
 
 const Memoized = memo(SvgImage);
