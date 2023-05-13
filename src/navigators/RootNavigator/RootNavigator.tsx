@@ -1,5 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootNavigatorParams} from './types';
 import {PublicNavigator} from '../PublicNavigator/PublicNavigator';
@@ -17,5 +16,3 @@ const RootNavigator = () => {
 };
 
 export {RootNavigator};
-
-const styles = StyleSheet.create({});
