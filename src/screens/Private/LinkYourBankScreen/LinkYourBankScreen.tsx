@@ -6,8 +6,10 @@ import {Button} from '@src/components/Button';
 import {SvgImage} from '@src/components/SvgImage';
 import {Text} from '@src/components/Text';
 import {COLORS} from '@src/constants';
+import {useLoginContext} from '@src/context/UserContext';
 
 const LinkYourBankScreen = () => {
+  const {setLogOut} = useLoginContext();
   return (
     <SafeAreaView edges={['bottom']} style={styles.container}>
       <View style={styles.bodyContainer}>
@@ -26,7 +28,7 @@ const LinkYourBankScreen = () => {
         </Text>
       </View>
 
-      <Button text="LINK A BANK" />
+      <Button text="LINK A BANK" onPress={() => setLogOut()} />
     </SafeAreaView>
   );
 };

@@ -8,9 +8,10 @@ import React, {
   useReducer,
 } from 'react';
 
-type Action = {type: 'SET_LOGIN'; payload: User | null};
+type Action = {type: 'SET_LOGIN'; payload: User} | {type: 'SET_LOGOUT'};
 interface StateMutators {
   setLoginStatus: (payload: User) => void;
+  setLogOut: () => void;
 }
 type ContextState = State & StateMutators;
 type State = {user: User | null};
@@ -18,6 +19,7 @@ type State = {user: User | null};
 const initialState: ContextState = {
   user: null,
   setLoginStatus: () => {},
+  setLogOut: () => {},
 };
 
 const UserContext = createContext<ContextState>(initialState);
@@ -30,6 +32,9 @@ const loginReducer = (state: State, action: Action) => {
         user: action.payload,
       };
     }
+    case 'SET_LOGOUT': {
+      return initialState;
+    }
     default:
       return state;
   }
@@ -41,11 +46,15 @@ export const UserProvider: FC<PropsWithChildren> = props => {
   const setLoginStatus: StateMutators['setLoginStatus'] = payload => {
     dispatch({type: 'SET_LOGIN', payload});
   };
+  const setLogOut: StateMutators['setLogOut'] = () => {
+    dispatch({type: 'SET_LOGOUT'});
+  };
 
   const value = useMemo(
     () => ({
       ...state,
       setLoginStatus,
+      setLogOut,
     }),
     [state],
   );
