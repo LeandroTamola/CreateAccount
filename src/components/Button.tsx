@@ -6,10 +6,13 @@ import {
 import React, {FC} from 'react';
 import {COLORS} from '@src/constants';
 import {Text} from './Text';
+import {SvgImage} from './SvgImage';
+import {SvgImageName} from './SvgImage';
 
 interface Props extends TouchableOpacityProps {
-  text: string;
+  text?: string;
   variant?: keyof typeof buttonStyles;
+  iconName?: SvgImageName;
 }
 
 const Button: FC<Props> = ({
@@ -17,6 +20,7 @@ const Button: FC<Props> = ({
   variant = 'primary',
   style,
   disabled,
+  iconName,
   ...props
 }) => {
   return (
@@ -27,9 +31,12 @@ const Button: FC<Props> = ({
         disabled && buttonStyles[variant].disabled,
         style,
       ]}>
-      <Text style={buttonStyles[variant].text} bold>
-        {text}
-      </Text>
+      {iconName && <SvgImage name={iconName} color={COLORS.WHITE} />}
+      {text && (
+        <Text style={buttonStyles[variant].text} bold numberOfLines={1}>
+          {text}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 };
@@ -41,7 +48,7 @@ const buttonStyles = {
     button: {
       width: '100%',
       borderRadius: 5,
-      backgroundColor: COLORS.SECONDARY,
+      backgroundColor: COLORS.GREEN,
       paddingVertical: 20,
       alignItems: 'center',
     },
@@ -50,6 +57,13 @@ const buttonStyles = {
     },
     disabled: {
       opacity: 0.5,
+    },
+  }),
+  ghost: StyleSheet.create({
+    button: {},
+    disabled: {opacity: 0.5},
+    text: {
+      color: COLORS.WHITE,
     },
   }),
 };

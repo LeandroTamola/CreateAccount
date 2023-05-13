@@ -12,14 +12,14 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		375951D2C0EB4DE1A9111441 /* Avenir LT Std 65 Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E576A7F0DBB642D4A0BB146D /* Avenir LT Std 65 Medium.otf */; };
+		6477BEB26ABD42A1A49CC633 /* Avenir LT Std 95 Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46CA86502E64F8C9A9431A5 /* Avenir LT Std 95 Black.otf */; };
 		7699B88040F8A987B510C191 /* libPods-CreateAccount-CreateAccountTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CreateAccount-CreateAccountTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CBB5D7C7E3504099B9BEEFEA /* AvenirLT Std 35 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9FBE5D22D6545C18D3D6DFD /* AvenirLT Std 35 Light.otf */; };
 		D49075CAC21A4755BD4119A0 /* Avenir LT Std 45 Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = B317767842964657A5B4A582 /* Avenir LT Std 45 Book.otf */; };
 		E30DB631E4C542EEA99DA0CC /* Avenir LT Std 55 Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3883C1CB29684019A6F5DB93 /* Avenir LT Std 55 Roman.otf */; };
-		375951D2C0EB4DE1A9111441 /* Avenir LT Std 65 Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E576A7F0DBB642D4A0BB146D /* Avenir LT Std 65 Medium.otf */; };
 		E6794C10E184453AB347F14E /* Avenir LT Std 85 Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6EC01A5BBF143E7BA7A0089 /* Avenir LT Std 85 Heavy.otf */; };
-		6477BEB26ABD42A1A49CC633 /* Avenir LT Std 95 Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46CA86502E64F8C9A9431A5 /* Avenir LT Std 95 Black.otf */; };
-		CBB5D7C7E3504099B9BEEFEA /* AvenirLT Std 35 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9FBE5D22D6545C18D3D6DFD /* AvenirLT Std 35 Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,19 +43,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CreateAccount/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CreateAccount/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-CreateAccount-CreateAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CreateAccount-CreateAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3883C1CB29684019A6F5DB93 /* Avenir LT Std 55 Roman.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir LT Std 55 Roman.otf"; path = "../src/assets/fonts/Avenir LT Std 55 Roman.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-CreateAccount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateAccount.debug.xcconfig"; path = "Target Support Files/Pods-CreateAccount/Pods-CreateAccount.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-CreateAccount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateAccount.release.xcconfig"; path = "Target Support Files/Pods-CreateAccount/Pods-CreateAccount.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-CreateAccount-CreateAccountTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateAccount-CreateAccountTests.debug.xcconfig"; path = "Target Support Files/Pods-CreateAccount-CreateAccountTests/Pods-CreateAccount-CreateAccountTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CreateAccount.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CreateAccount.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CreateAccount/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CreateAccount-CreateAccountTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateAccount-CreateAccountTests.release.xcconfig"; path = "Target Support Files/Pods-CreateAccount-CreateAccountTests/Pods-CreateAccount-CreateAccountTests.release.xcconfig"; sourceTree = "<group>"; };
+		B317767842964657A5B4A582 /* Avenir LT Std 45 Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir LT Std 45 Book.otf"; path = "../src/assets/fonts/Avenir LT Std 45 Book.otf"; sourceTree = "<group>"; };
+		E576A7F0DBB642D4A0BB146D /* Avenir LT Std 65 Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir LT Std 65 Medium.otf"; path = "../src/assets/fonts/Avenir LT Std 65 Medium.otf"; sourceTree = "<group>"; };
+		E9FBE5D22D6545C18D3D6DFD /* AvenirLT Std 35 Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLT Std 35 Light.otf"; path = "../src/assets/fonts/AvenirLT Std 35 Light.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		B317767842964657A5B4A582 /* Avenir LT Std 45 Book.otf */ = {isa = PBXFileReference; name = "Avenir LT Std 45 Book.otf"; path = "../src/assets/fonts/Avenir LT Std 45 Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3883C1CB29684019A6F5DB93 /* Avenir LT Std 55 Roman.otf */ = {isa = PBXFileReference; name = "Avenir LT Std 55 Roman.otf"; path = "../src/assets/fonts/Avenir LT Std 55 Roman.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E576A7F0DBB642D4A0BB146D /* Avenir LT Std 65 Medium.otf */ = {isa = PBXFileReference; name = "Avenir LT Std 65 Medium.otf"; path = "../src/assets/fonts/Avenir LT Std 65 Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F6EC01A5BBF143E7BA7A0089 /* Avenir LT Std 85 Heavy.otf */ = {isa = PBXFileReference; name = "Avenir LT Std 85 Heavy.otf"; path = "../src/assets/fonts/Avenir LT Std 85 Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F46CA86502E64F8C9A9431A5 /* Avenir LT Std 95 Black.otf */ = {isa = PBXFileReference; name = "Avenir LT Std 95 Black.otf"; path = "../src/assets/fonts/Avenir LT Std 95 Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E9FBE5D22D6545C18D3D6DFD /* AvenirLT Std 35 Light.otf */ = {isa = PBXFileReference; name = "AvenirLT Std 35 Light.otf"; path = "../src/assets/fonts/AvenirLT Std 35 Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F46CA86502E64F8C9A9431A5 /* Avenir LT Std 95 Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir LT Std 95 Black.otf"; path = "../src/assets/fonts/Avenir LT Std 95 Black.otf"; sourceTree = "<group>"; };
+		F6EC01A5BBF143E7BA7A0089 /* Avenir LT Std 85 Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir LT Std 85 Heavy.otf"; path = "../src/assets/fonts/Avenir LT Std 85 Heavy.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +150,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A56F058E86694E38ACDF7CDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B317767842964657A5B4A582 /* Avenir LT Std 45 Book.otf */,
+				3883C1CB29684019A6F5DB93 /* Avenir LT Std 55 Roman.otf */,
+				E576A7F0DBB642D4A0BB146D /* Avenir LT Std 65 Medium.otf */,
+				F6EC01A5BBF143E7BA7A0089 /* Avenir LT Std 85 Heavy.otf */,
+				F46CA86502E64F8C9A9431A5 /* Avenir LT Std 95 Black.otf */,
+				E9FBE5D22D6545C18D3D6DFD /* AvenirLT Std 35 Light.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,20 +174,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		A56F058E86694E38ACDF7CDB /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				B317767842964657A5B4A582 /* Avenir LT Std 45 Book.otf */,
-				3883C1CB29684019A6F5DB93 /* Avenir LT Std 55 Roman.otf */,
-				E576A7F0DBB642D4A0BB146D /* Avenir LT Std 65 Medium.otf */,
-				F6EC01A5BBF143E7BA7A0089 /* Avenir LT Std 85 Heavy.otf */,
-				F46CA86502E64F8C9A9431A5 /* Avenir LT Std 95 Black.otf */,
-				E9FBE5D22D6545C18D3D6DFD /* AvenirLT Std 35 Light.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
