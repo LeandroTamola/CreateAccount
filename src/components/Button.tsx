@@ -1,4 +1,5 @@
 import {
+  ActivityIndicator,
   StyleSheet,
   TouchableOpacity,
   TouchableOpacityProps,
@@ -13,6 +14,7 @@ interface Props extends TouchableOpacityProps {
   text?: string;
   variant?: keyof typeof buttonStyles;
   iconName?: SvgImageName;
+  isLoading?: boolean;
 }
 
 const Button: FC<Props> = ({
@@ -21,6 +23,7 @@ const Button: FC<Props> = ({
   style,
   disabled,
   iconName,
+  isLoading,
   ...props
 }) => {
   return (
@@ -30,12 +33,19 @@ const Button: FC<Props> = ({
         buttonStyles[variant].button,
         disabled && buttonStyles[variant].disabled,
         style,
-      ]}>
-      {iconName && <SvgImage name={iconName} color={COLORS.WHITE} />}
-      {text && (
-        <Text style={buttonStyles[variant].text} bold numberOfLines={1}>
-          {text}
-        </Text>
+      ]}
+      disabled={disabled || isLoading}>
+      {isLoading ? (
+        <ActivityIndicator color={COLORS.WHITE} />
+      ) : (
+        <>
+          {iconName && <SvgImage name={iconName} color={COLORS.WHITE} />}
+          {text && (
+            <Text style={buttonStyles[variant].text} bold numberOfLines={1}>
+              {text}
+            </Text>
+          )}
+        </>
       )}
     </TouchableOpacity>
   );
@@ -51,6 +61,8 @@ const buttonStyles = {
       backgroundColor: COLORS.GREEN,
       paddingVertical: 20,
       alignItems: 'center',
+      justifyContent: 'center',
+      height: 60,
     },
     text: {
       color: COLORS.WHITE,

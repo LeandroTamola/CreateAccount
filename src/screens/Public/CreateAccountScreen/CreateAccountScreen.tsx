@@ -2,58 +2,90 @@ import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-import {Text} from '@src/components/Text';
-import {Button} from '@src/components/Button';
 import {COLORS} from '@src/constants';
-import {TextInput} from '@src/components/TextInput';
 import {useCreateAccountScreen} from './useCreateAccountScreen';
+import {Button, KeyboardAvoidingView, Text, TextInput} from '@src/components';
 
 const CreateAccountScreen = () => {
-  const {handleSubmit, onTermsOfServicePress, formValues} =
-    useCreateAccountScreen();
+  const {
+    onTermsOfServicePress,
+    formik: {values, handleSubmit, handleChange, handleBlur, errors, touched},
+    submitDisabled,
+    isLoading,
+  } = useCreateAccountScreen();
 
   return (
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.contentContainerStyle}>
-      <View style={styles.formContainer}>
-        <TextInput
-          value={formValues.current?.firstName}
-          iconName="PersonCircle"
-          placeholder="First Name"
-          style={styles.textInput}
-        />
-        <TextInput
-          value={formValues.current?.lastName}
-          iconName="PersonCircle"
-          placeholder="Last Name"
-          style={styles.textInput}
-        />
-        <TextInput
-          value={formValues.current?.email}
-          iconName="Envelope"
-          placeholder="Email Address"
-          style={styles.textInput}
-          keyboardType="email-address"
-        />
-        <TextInput
-          value={formValues.current?.password}
-          iconName="Lock"
-          placeholder="Password"
-          style={styles.textInput}
-          secureTextEntry
-        />
-      </View>
+    <KeyboardAvoidingView>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.contentContainerStyle}>
+        <View style={styles.formContainer}>
+          <TextInput
+            value={values.firstName}
+            onChangeText={handleChange('firstName')}
+            onBlur={handleBlur('firstName')}
+            iconName="PersonCircle"
+            placeholder="First Name"
+            autoCapitalize="words"
+            style={styles.textInput}
+            autoCorrect={false}
+            {...(errors.firstName &&
+              touched.firstName && {errorMessage: errors.firstName})}
+          />
+          <TextInput
+            value={values.lastName}
+            onChangeText={handleChange('lastName')}
+            onBlur={handleBlur('lastName')}
+            iconName="PersonCircle"
+            placeholder="Last Name"
+            autoCapitalize="words"
+            style={styles.textInput}
+            autoCorrect={false}
+            {...(errors.lastName &&
+              touched.lastName && {errorMessage: errors.lastName})}
+          />
+          <TextInput
+            value={values.email}
+            onChangeText={handleChange('email')}
+            onBlur={handleBlur('email')}
+            iconName="Envelope"
+            placeholder="Email Address"
+            style={styles.textInput}
+            keyboardType="email-address"
+            autoCapitalize="none"
+            autoCorrect={false}
+            {...(errors.email && touched.email && {errorMessage: errors.email})}
+          />
+          <TextInput
+            value={values.password}
+            onChangeText={handleChange('password')}
+            onBlur={handleBlur('password')}
+            iconName="Lock"
+            placeholder="Password"
+            style={styles.textInput}
+            autoCapitalize="none"
+            autoCorrect={false}
+            secureTextEntry
+            {...(errors.password &&
+              touched.password && {errorMessage: errors.password})}
+          />
+        </View>
 
-      <SafeAreaView edges={['bottom']} style={styles.footer}>
-        <Text style={styles.disclaimer}>
-          By creating this account, I agree that I am a U.S. resident, 18 years
-          or older with a valid bank account. I agree to Goalsetter’s{' '}
-          <Text onPress={onTermsOfServicePress}>Terms of Service</Text>
-        </Text>
-        <Button text="CREATE FREE ACCOUNT" onPress={handleSubmit} />
-      </SafeAreaView>
-    </ScrollView>
+        <SafeAreaView edges={['bottom']} style={styles.footer}>
+          <Text style={styles.disclaimer}>
+            By creating this account, I agree that I am a U.S. resident, 18
+            years or older with a valid bank account. I agree to Goalsetter’s{' '}
+            <Text onPress={onTermsOfServicePress}>Terms of Service</Text>
+          </Text>
+          <Button
+            text="CREATE FREE ACCOUNT"
+            onPress={handleSubmit}
+            disabled={submitDisabled}
+            isLoading={isLoading}
+          />
+        </SafeAreaView>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 
