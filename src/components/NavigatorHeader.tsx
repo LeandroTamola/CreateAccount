@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {COLORS} from '@src/constants';
-import {LinearGradient, LinearGradientProps} from '@components/LinearGradient';
-import {Text} from '@components/Text';
 import {useNavigation} from '@react-navigation/native';
+
+import {COLORS} from '@src/constants';
+import {Text, LinearGradient} from '@src/components';
+import {LinearGradientProps} from '@components/LinearGradient';
 import {RootNavigatorProps} from '@src/navigators/RootNavigator/types';
 import {Button} from './Button';
 

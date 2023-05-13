@@ -2,7 +2,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {PrivateNavigatorParams} from './types';
-import {LinkYourBankScreen} from '../../screens/Private';
+import {LinkYourBankScreen} from '@screens/Private';
 import {NavigatorHeader} from '@src/components/NavigatorHeader';
 
 const PivateStack = createNativeStackNavigator<PrivateNavigatorParams>();

@@ -1,7 +1,10 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {PublicNavigatorParams} from './types';
-import {CreateAccountScreen, TermsOfServicesScreen} from '../../screens';
+import {
+  CreateAccountScreen,
+  TermsOfServicesScreen,
+} from '@src/screens/Public/index';
 import {NavigatorHeader} from '@src/components/NavigatorHeader';
 
 const PublicStack = createNativeStackNavigator<PublicNavigatorParams>();

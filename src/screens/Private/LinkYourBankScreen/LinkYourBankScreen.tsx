@@ -2,9 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-import {Button} from '@src/components/Button';
-import {SvgImage} from '@src/components/SvgImage';
-import {Text} from '@src/components/Text';
+import {Button, SvgImage, Text} from '@src/components';
 import {COLORS} from '@src/constants';
 import {useLoginContext} from '@src/context/UserContext';
 

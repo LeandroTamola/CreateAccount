@@ -1,6 +1,7 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {SvgImage} from '@src/components/SvgImage';
+
+import {SvgImage, Text} from '@src/components';
 import {COLORS} from '@src/constants';
 
 const TermsOfServicesScreen = () => {

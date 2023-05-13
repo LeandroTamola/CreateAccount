@@ -1,14 +1,15 @@
+import {useState} from 'react';
+import {useFormik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
+
 import {useLoginContext} from '@src/context/UserContext';
 import {PublicNavigatorProps} from '@src/navigators/PublicNavigator/types';
-import {useFormik} from 'formik';
 import {
   CreateAccountValues,
   CreateAccountSchema,
   initialValues,
 } from './constants';
 import {Status} from '@src/types/status';
-import {useState} from 'react';
 
 const useCreateAccountScreen = () => {
   const navigation = useNavigation<PublicNavigatorProps>();
