@@ -23,7 +23,8 @@ const Text: FC<Props> = ({
         bold && styles.bold,
         onPress && styles.link,
         style,
-      ]}>
+      ]}
+      onPress={onPress}>
       {children}
     </RNText>
   );

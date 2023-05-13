@@ -8,7 +8,8 @@ const TermsOfServicesScreen = () => {
   return (
     <ScrollView
       style={styles.container}
-      contentContainerStyle={styles.contentContainerStyle}>
+      contentContainerStyle={styles.contentContainerStyle}
+      showsHorizontalScrollIndicator={false}>
       <SvgImage
         name="TermsOfServicesIllustration"
         type="illustration"

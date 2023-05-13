@@ -7,12 +7,16 @@ import {
   StyleProp,
   ViewStyle,
   Pressable,
+  NativeSyntheticEvent,
+  TextInputFocusEventData,
 } from 'react-native';
 import Animated, {
+  runOnJS,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+
 import {SvgImage, SvgImageName} from './SvgImage';
 import {COLORS} from '@src/constants';
 import {Text} from './Text';
@@ -28,6 +32,7 @@ const TextInput: FC<Props> = ({
   placeholder,
   containerStyle,
   value,
+  onBlur,
   ...props
 }) => {
   const isFocused = useSharedValue<boolean>(false);
@@ -41,9 +46,10 @@ const TextInput: FC<Props> = ({
     isFocused.value = true;
   };
 
-  const onBlur = () => {
+  const handleOnBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
     'worklet';
     isFocused.value = false;
+    onBlur && runOnJS(onBlur)(e);
   };
 
   const animatedLabel = useAnimatedStyle(() => {
@@ -81,9 +87,8 @@ const TextInput: FC<Props> = ({
           value={value}
           ref={inputRef}
           style={styles.input}
-          allowFontScaling={false}
           onFocus={onFocus}
-          onBlur={onBlur}
+          onBlur={handleOnBlur}
         />
       </View>
     </Pressable>
