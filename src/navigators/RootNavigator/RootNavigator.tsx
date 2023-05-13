@@ -11,7 +11,7 @@ const RootNavigator = () => {
   const {user} = useLoginContext();
   return (
     <RootStack.Navigator screenOptions={{headerShown: false}}>
-      {!!user ? (
+      {user ? (
         <RootStack.Screen
           name="PrivateNavigator"
           component={PrivateNavigator}
