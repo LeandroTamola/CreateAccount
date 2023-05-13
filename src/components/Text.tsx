@@ -7,11 +7,23 @@ interface Props extends TextProps {
   bold?: boolean;
 }
 
-const Text: FC<Props> = ({children, variant = 'md', bold, style, ...props}) => {
+const Text: FC<Props> = ({
+  children,
+  variant = 'md',
+  bold,
+  style,
+  onPress,
+  ...props
+}) => {
   return (
     <RNText
       {...props}
-      style={[textStyles[variant], bold && styles.bold, style]}>
+      style={[
+        textStyles[variant],
+        bold && styles.bold,
+        onPress && styles.link,
+        style,
+      ]}>
       {children}
     </RNText>
   );
@@ -23,29 +35,32 @@ const styles = StyleSheet.create({
   bold: {
     fontFamily: 'AvenirLTStd-Black',
   },
+  link: {
+    color: COLORS.PRIMARY.DEFAULT,
+  },
 });
 
 const textStyles = StyleSheet.create({
   xl: {
-    color: COLORS.BLACK,
+    color: COLORS.TEXT.PRIMARY,
     fontFamily: 'AvenirLTStd-Heavy',
     fontSize: 20,
     lineHeight: 24,
   },
   lg: {
-    color: COLORS.BLACK,
+    color: COLORS.TEXT.PRIMARY,
     fontFamily: 'AvenirLTStd-Roman',
     fontSize: 20,
     lineHeight: 24,
   },
   md: {
-    color: COLORS.BLACK,
+    color: COLORS.TEXT.PRIMARY,
     fontFamily: 'AvenirLTStd-Roman',
     fontSize: 14,
     lineHeight: 16,
   },
   sm: {
-    color: COLORS.BLACK,
+    color: COLORS.TEXT.PRIMARY,
     fontFamily: 'AvenirLTStd-Roman',
     fontSize: 12,
     lineHeight: 14,

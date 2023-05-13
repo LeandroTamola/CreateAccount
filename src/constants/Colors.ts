@@ -3,6 +3,10 @@ export const COLORS = {
   SECONDARY: {LIGHT: '#8D24C4', DARK: '#500F71'},
   GREEN: '#5FBA20',
   BLACK: '#000000',
+  TEXT: {
+    PRIMARY: '#000000',
+    SECONDARY: '#00000066',
+  },
   WHITE: '#FFFFFF',
   TRANSPARENT: 'transparent',
 };
