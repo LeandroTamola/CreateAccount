@@ -4,17 +4,26 @@ import {StyleSheet, Text as RNText, TextProps} from 'react-native';
 
 interface Props extends TextProps {
   variant?: keyof typeof textStyles;
+  bold?: boolean;
 }
 
-const Text: FC<Props> = ({children, variant = 'md', style, ...props}) => {
+const Text: FC<Props> = ({children, variant = 'md', bold, style, ...props}) => {
   return (
-    <RNText {...props} style={[textStyles[variant], style]}>
+    <RNText
+      {...props}
+      style={[textStyles[variant], bold && styles.bold, style]}>
       {children}
     </RNText>
   );
 };
 
 export {Text};
+
+const styles = StyleSheet.create({
+  bold: {
+    fontFamily: 'AvenirLTStd-Black',
+  },
+});
 
 const textStyles = StyleSheet.create({
   xl: {
