@@ -81,11 +81,7 @@ const TextInput: FC<TextInputProps> = ({
           !!errorMessage && styles.errorContainer,
         ])}>
         {iconName && (
-          <SvgImage
-            name={iconName}
-            style={styles.icon}
-            fill={COLORS.TEXT.SECONDARY}
-          />
+          <SvgImage name={iconName} style={styles.icon} fill={COLORS.WHITE} />
         )}
         <RNTextInput
           {...props}
@@ -125,6 +121,7 @@ const styles = StyleSheet.create({
     marginRight: 13,
   },
   input: {
+    width: '100%',
     fontFamily: 'AvenirLTStd-Heavy',
     color: COLORS.PRIMARY.DEFAULT,
     fontSize: 16,
