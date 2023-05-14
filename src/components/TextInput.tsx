@@ -2,7 +2,7 @@ import React, {FC, useRef} from 'react';
 import {
   StyleSheet,
   TextInput as RNTextInput,
-  TextInputProps,
+  TextInputProps as RNTextInputProps,
   View,
   StyleProp,
   ViewStyle,
@@ -24,13 +24,13 @@ import {PlatformUtils} from '@src/utils/platform';
 
 const TRANSLATE_Y = PlatformUtils.isIOS ? 24 : 40;
 
-interface Props extends TextInputProps {
-  iconName: SvgImageName;
+export interface TextInputProps extends RNTextInputProps {
+  iconName?: SvgImageName;
   errorMessage?: string;
   containerStyle?: StyleProp<ViewStyle>;
 }
 
-const TextInput: FC<Props> = ({
+const TextInput: FC<TextInputProps> = ({
   iconName,
   errorMessage,
   placeholder,
@@ -75,10 +75,11 @@ const TextInput: FC<Props> = ({
         </Text>
       </Animated.View>
       <View
-        style={[
+        testID="text-input-wrapper"
+        style={StyleSheet.flatten([
           styles.textInputContainer,
           !!errorMessage && styles.errorContainer,
-        ]}>
+        ])}>
         {iconName && (
           <SvgImage
             name={iconName}

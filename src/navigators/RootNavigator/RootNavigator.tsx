@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootNavigatorParams} from './types';
 import {PublicNavigator} from '../PublicNavigator/PublicNavigator';
 import {PrivateNavigator} from '../PrivateNavigator/PrivateNavigator';
-import {useLoginContext} from '@src/context/UserContext';
+import {useLoginContext} from '@src/context/UserContext/UserContext';
 
 const RootStack = createNativeStackNavigator<RootNavigatorParams>();
 

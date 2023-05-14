@@ -4,10 +4,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {Button, SvgImage, Text} from '@src/components';
 import {COLORS} from '@src/constants';
-import {useLoginContext} from '@src/context/UserContext';
 
 const LinkYourBankScreen = () => {
-  const {setLogOut} = useLoginContext();
   return (
     <ScrollView
       style={styles.scrollView}
@@ -17,6 +15,7 @@ const LinkYourBankScreen = () => {
       <SafeAreaView edges={['bottom']} style={styles.container}>
         <View style={styles.bodyContainer}>
           <SvgImage
+            testID="link-your-bank-illustration"
             name="LinkYourBankIllustration"
             type="illustration"
             style={styles.illustration}
@@ -31,7 +30,7 @@ const LinkYourBankScreen = () => {
           </Text>
         </View>
 
-        <Button text="LINK A BANK" onPress={() => setLogOut()} />
+        <Button text="LINK A BANK" testID="LinkYourBankButton" />
       </SafeAreaView>
     </ScrollView>
   );

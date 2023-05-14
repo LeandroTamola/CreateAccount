@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {RootNavigator} from './navigators/RootNavigator/RootNavigator';
-import {UserProvider} from './context/UserContext';
+import {UserProvider} from './context/UserContext/UserContext';
 
 function App(): JSX.Element {
   return (

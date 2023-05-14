@@ -24,6 +24,7 @@ const CreateAccountScreen = () => {
         showsVerticalScrollIndicator={false}>
         <View style={styles.formContainer}>
           <TextInput
+            testID="first-name-input"
             value={values.firstName}
             onChangeText={handleChange('firstName')}
             onBlur={handleBlur('firstName')}
@@ -36,6 +37,7 @@ const CreateAccountScreen = () => {
               touched.firstName && {errorMessage: errors.firstName})}
           />
           <TextInput
+            testID="last-name-input"
             value={values.lastName}
             onChangeText={handleChange('lastName')}
             onBlur={handleBlur('lastName')}
@@ -48,6 +50,7 @@ const CreateAccountScreen = () => {
               touched.lastName && {errorMessage: errors.lastName})}
           />
           <TextInput
+            testID="email-input"
             value={values.email}
             onChangeText={handleChange('email')}
             onBlur={handleBlur('email')}
@@ -60,6 +63,7 @@ const CreateAccountScreen = () => {
             {...(errors.email && touched.email && {errorMessage: errors.email})}
           />
           <TextInput
+            testID="password-input"
             value={values.password}
             onChangeText={handleChange('password')}
             onBlur={handleBlur('password')}
@@ -70,7 +74,7 @@ const CreateAccountScreen = () => {
             autoCorrect={false}
             secureTextEntry
             returnKeyType="done"
-            onSubmitEditing={handleSubmit}
+            onSubmitEditing={() => handleSubmit()}
             {...(errors.password &&
               touched.password && {errorMessage: errors.password})}
           />
@@ -83,8 +87,9 @@ const CreateAccountScreen = () => {
             <Text onPress={onTermsOfServicePress}>Terms of Service</Text>
           </Text>
           <Button
+            testID="create-account-button"
             text="CREATE FREE ACCOUNT"
-            onPress={handleSubmit}
+            onPress={() => handleSubmit()}
             disabled={submitDisabled}
             isLoading={isLoading}
           />

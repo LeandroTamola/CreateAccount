@@ -4,10 +4,10 @@ import RNLinearGradient from 'react-native-linear-gradient';
 
 type Direction = 'horizontal' | 'vertical';
 
-export interface LinearGradientProps extends PropsWithChildren {
+export type LinearGradientProps = PropsWithChildren<{
   colors: string[];
   direction?: Direction;
-}
+}>;
 
 const LinearGradient: FC<LinearGradientProps> = ({
   children,

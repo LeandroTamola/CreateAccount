@@ -1,4 +1,3 @@
-import {User} from '@src/models/User';
 import React, {
   FC,
   PropsWithChildren,
@@ -7,14 +6,7 @@ import React, {
   useMemo,
   useReducer,
 } from 'react';
-
-type Action = {type: 'SET_LOGIN'; payload: User} | {type: 'SET_LOGOUT'};
-interface StateMutators {
-  setLoginStatus: (payload: User) => void;
-  setLogOut: () => void;
-}
-type ContextState = State & StateMutators;
-type State = {user: User | null};
+import {Action, ContextState, State, StateMutators} from './types';
 
 const initialState: ContextState = {
   user: null,
@@ -40,7 +32,7 @@ const loginReducer = (state: State, action: Action) => {
   }
 };
 
-export const UserProvider: FC<PropsWithChildren> = props => {
+export const UserProvider: FC<PropsWithChildren<unknown>> = props => {
   const [state, dispatch] = useReducer(loginReducer, initialState);
 
   const setLoginStatus: StateMutators['setLoginStatus'] = payload => {

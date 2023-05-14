@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import {useLoginContext} from '@src/context/UserContext';
+import {useLoginContext} from '@src/context/UserContext/UserContext';
 import {CreateAccountValues} from '@src/screens/Public/CreateAccountScreen/constants';
 import {Status} from '@src/types/status';
 
