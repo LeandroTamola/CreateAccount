@@ -21,6 +21,7 @@ import {SvgImage, SvgImageName} from './SvgImage';
 import {COLORS} from '@src/constants';
 import {Text} from './Text';
 import {PlatformUtils} from '@src/utils/platform';
+import {FONTS} from '@src/constants/Fonts';
 
 const TRANSLATE_Y = PlatformUtils.isIOS ? 24 : 40;
 
@@ -115,14 +116,13 @@ const styles = StyleSheet.create({
     color: COLORS.TEXT.SECONDARY,
     marginLeft: 31,
     marginBottom: 6,
-    opacity: 0.7,
   },
   icon: {
     marginRight: 13,
   },
   input: {
     width: '100%',
-    fontFamily: 'AvenirLTStd-Heavy',
+    fontFamily: FONTS.AvenirStdHeavy,
     color: COLORS.PRIMARY.DEFAULT,
     fontSize: 16,
   },

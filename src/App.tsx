@@ -8,7 +8,7 @@ function App(): JSX.Element {
   return (
     <NavigationContainer>
       <UserProvider>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" translucent />
         <RootNavigator />
       </UserProvider>
     </NavigationContainer>

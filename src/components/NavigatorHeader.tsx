@@ -4,10 +4,11 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
 
 import {COLORS} from '@src/constants';
-import {Text, LinearGradient} from '@src/components';
+import {Text, LinearGradient, SvgImage} from '@src/components';
 import {LinearGradientProps} from '@components/LinearGradient';
 import {RootNavigatorProps} from '@src/navigators/RootNavigator/types';
 import {Button} from './Button';
+import {PlatformUtils} from '@src/utils/platform';
 
 type Variant = 'primary' | 'secondary';
 interface Props {
@@ -22,8 +23,17 @@ const NavigatorHeader: FC<Props> = ({
   variant = 'primary',
 }) => {
   const navigation = useNavigation<RootNavigatorProps>();
+
   return (
     <LinearGradient colors={gradientColors[variant]}>
+      {variant === 'primary' && (
+        <SvgImage
+          name="HeaderPatternIllustration"
+          width={PlatformUtils.SCREEN_WIDTH}
+          height="100%"
+          style={styles.headerPattern}
+        />
+      )}
       <SafeAreaView edges={['top']} style={styles.container}>
         {navigation.canGoBack() && (
           <Button
@@ -59,6 +69,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+  },
+  headerPattern: {
+    ...StyleSheet.absoluteFillObject,
   },
   text: {
     color: COLORS.WHITE,

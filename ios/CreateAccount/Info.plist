@@ -36,15 +36,12 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Avenir LT Std 45 Book.otf</string>
-		<string>Avenir LT Std 55 Roman.otf</string>
-		<string>Avenir LT Std 65 Medium.otf</string>
-		<string>Avenir LT Std 85 Heavy.otf</string>
-		<string>Avenir LT Std 95 Black.otf</string>
-		<string>AvenirLT Std 35 Light.otf</string>
+		<string>AvenirLTStd-Black.otf</string>
+		<string>AvenirLTStd-Roman.otf</string>
+		<string>AvenirLTStd-Heavy.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen.storyboard</string>

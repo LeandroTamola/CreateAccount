@@ -1,4 +1,5 @@
 import {COLORS} from '@src/constants';
+import {FONTS} from '@src/constants/Fonts';
 import React, {FC} from 'react';
 import {StyleSheet, Text as RNText, TextProps} from 'react-native';
 
@@ -34,7 +35,7 @@ export {Text};
 
 const styles = StyleSheet.create({
   bold: {
-    fontFamily: 'AvenirLTStd-Black',
+    fontFamily: FONTS.AvenirStdBlack,
   },
   link: {
     color: COLORS.PRIMARY.DEFAULT,
@@ -42,27 +43,21 @@ const styles = StyleSheet.create({
 });
 
 const textStyles = StyleSheet.create({
-  xl: {
-    color: COLORS.TEXT.PRIMARY,
-    fontFamily: 'AvenirLTStd-Heavy',
-    fontSize: 20,
-    lineHeight: 24,
-  },
   lg: {
     color: COLORS.TEXT.PRIMARY,
-    fontFamily: 'AvenirLTStd-Roman',
+    fontFamily: FONTS.AvenirStdRoman,
     fontSize: 20,
     lineHeight: 24,
   },
   md: {
     color: COLORS.TEXT.PRIMARY,
-    fontFamily: 'AvenirLTStd-Roman',
+    fontFamily: FONTS.AvenirStdRoman,
     fontSize: 14,
-    lineHeight: 16,
+    lineHeight: 19,
   },
   sm: {
     color: COLORS.TEXT.PRIMARY,
-    fontFamily: 'AvenirLTStd-Roman',
+    fontFamily: FONTS.AvenirStdRoman,
     fontSize: 12,
     lineHeight: 14,
   },

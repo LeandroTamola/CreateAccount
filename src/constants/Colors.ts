@@ -6,7 +6,8 @@ export const COLORS = {
   BLACK: '#000000',
   TEXT: {
     PRIMARY: '#000000',
-    SECONDARY: '#00000066',
+    SECONDARY: '#D8D8D8',
+    TERTIARY: '#00000066',
   },
   WHITE: '#FFFFFF',
   TRANSPARENT: 'transparent',

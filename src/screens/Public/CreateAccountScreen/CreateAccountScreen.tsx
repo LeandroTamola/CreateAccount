@@ -5,6 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {COLORS} from '@src/constants';
 import {useCreateAccountScreen} from './useCreateAccountScreen';
 import {Button, KeyboardAvoidingView, Text, TextInput} from '@src/components';
+import {PlatformUtils} from '@src/utils/platform';
 
 const CreateAccountScreen = () => {
   const {
@@ -92,6 +93,7 @@ const CreateAccountScreen = () => {
             onPress={() => handleSubmit()}
             disabled={submitDisabled}
             isLoading={isLoading}
+            style={styles.createAccountButton}
           />
         </SafeAreaView>
       </ScrollView>
@@ -125,7 +127,11 @@ const styles = StyleSheet.create({
   },
   disclaimer: {
     textAlign: 'center',
-    color: COLORS.TEXT.SECONDARY,
-    marginBottom: 23,
+    color: COLORS.TEXT.TERTIARY,
+    marginBottom: 25,
+  },
+  createAccountButton: {
+    width: PlatformUtils.SCREEN_WIDTH * 0.7,
+    alignSelf: 'center',
   },
 });
